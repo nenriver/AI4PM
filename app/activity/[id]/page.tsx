@@ -5,6 +5,84 @@ import ImageModal from '@/components/ImageModal'
 import WritingComparison from '@/components/WritingComparison'
 import { getAssetPath } from '@/lib/utils'
 
+interface DetailedContentSection {
+  heading: string
+  intro: string
+  bullets: string[]
+  note: string
+}
+
+interface DetailedContent {
+  title: string
+  sections: DetailedContentSection[]
+  excelAdvantages?: {
+    title: string
+    intro: string
+    bullets: string[]
+    conclusion: string
+  }
+  layout?: 'default' | 'side-by-side'
+}
+
+interface Tool {
+  name: string
+  description: string
+  url: string
+  videoId?: string
+  embedUrl?: string
+  screenshotUrl?: string
+  exampleUrl?: string
+  detailedContent?: DetailedContent
+  justifications?: {
+    title: string
+    items: string[]
+    imageUrl?: string
+  }
+  automationExamples?: string[]
+}
+
+interface OtherTool {
+  name: string
+  url: string
+  note?: string
+  exampleUrl?: string
+  videoUrl?: string
+}
+
+interface WritingPrompt {
+  id: number
+  title: string
+  prompt: string
+  responses: {
+    gemini: string
+    chatgpt: string
+    claude: string
+  }
+  ratings?: {
+    accuracy: { gemini: string; chatgpt: string; claude: string }
+    clarity: { gemini: string; chatgpt: string; claude: string }
+    structure: { gemini: string; chatgpt: string; claude: string }
+    technicalDepth: { gemini: string; chatgpt: string; claude: string }
+  }
+}
+
+interface Activity {
+  id: number
+  time: string
+  title: string
+  description: string
+  why: string
+  howAiHelps: string
+  recommendation?: string
+  tools: Tool[]
+  videoId?: string
+  otherTools?: OtherTool[]
+  tutorialLinks?: { name: string; url: string }[]
+  writingComparison?: {
+    prompts: WritingPrompt[]
+  }
+}
+
 interface PageProps {
   params: { id: string }
 }
@@ -16,7 +94,7 @@ export function generateStaticParams() {
 }
 
 export default function ActivityPage({ params }: PageProps) {
-  const activity = activities.find((a) => a.id.toString() === params.id)
+  const activity = activities.find((a) => a.id.toString() === params.id) as Activity | undefined
 
   if (!activity) {
     return (
@@ -91,7 +169,9 @@ export default function ActivityPage({ params }: PageProps) {
           </h2>
 
           <div className="space-y-12">
-            {activity.tools.map((tool) => (
+            {activity.tools.map((t) => {
+              const tool = t as Tool
+              return (
               <div key={tool.name} className="bg-slate-800 rounded-xl overflow-hidden">
                 {/* Tool Header */}
                 <div className="p-6 border-b border-slate-700">
@@ -212,7 +292,7 @@ export default function ActivityPage({ params }: PageProps) {
                   </div>
                 )}
               </div>
-            ))}
+            )})}
           </div>
         </section>
 
