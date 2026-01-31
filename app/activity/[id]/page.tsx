@@ -3,6 +3,7 @@ import activities from '@/data/activities.json'
 import CollapsibleContent from '@/components/CollapsibleContent'
 import ImageModal from '@/components/ImageModal'
 import WritingComparison from '@/components/WritingComparison'
+import ActivityNav from '@/components/ActivityNav'
 import { getAssetPath } from '@/lib/utils'
 
 interface DetailedContentSection {
@@ -125,6 +126,9 @@ export default function ActivityPage({ params }: PageProps) {
           </Link>
         </div>
       </header>
+
+      {/* Activity Navigation */}
+      <ActivityNav currentId={activity.id} />
 
       {/* Content */}
       <div className="max-w-5xl mx-auto px-6 py-12">
