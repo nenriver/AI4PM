@@ -1,0 +1,109 @@
+[
+  {
+    "category": "AI Copilots & Search",
+    "tools": [
+      {
+        "name": "Microsoft 365 Copilot",
+        "pros": ["Deep integration with Office apps", "Enterprise-grade security", "Works across Word, Excel, PowerPoint, Outlook"],
+        "cons": ["Requires Microsoft 365 subscription", "Higher cost ($30/user/mo)", "Limited to Microsoft ecosystem"],
+        "fit": "Best for teams already using Microsoft 365 who want AI embedded in their daily workflow"
+      },
+      {
+        "name": "Glean",
+        "pros": ["Searches across all apps (email, Slack, Drive, Jira)", "AI answers with sources", "Works beyond Microsoft ecosystem"],
+        "cons": ["Enterprise pricing", "Requires IT setup", "Best with many integrated apps"],
+        "fit": "Best for quickly finding information across all company tools and getting AI-powered answers"
+      }
+    ]
+  },
+  {
+    "category": "Meeting Intelligence",
+    "tools": [
+      {
+        "name": "Otter.ai",
+        "pros": ["Excellent real-time transcription", "Cross-platform (Zoom, Teams, Meet)", "AI Q&A over past meetings"],
+        "cons": ["Limited integrations on free plan", "Accuracy varies with accents", "Storage limits"],
+        "fit": "Best for PMs who need reliable transcription and want to search meeting history"
+      }
+    ]
+  },
+  {
+    "category": "Writing & Documentation",
+    "tools": [
+      {
+        "name": "ChatGPT",
+        "pros": ["Versatile all-around writing", "Good structure and clarity", "Canvas for inline editing"],
+        "cons": ["Subscription for full features", "Can feel generic without prompting", "Separate interface"],
+        "fit": "Best for balanced writing with broad topic coverage and structured output"
+      },
+      {
+        "name": "Claude",
+        "pros": ["Excellent for long-form content", "Nuanced and thoughtful responses", "Large context window"],
+        "cons": ["No native integrations", "Separate interface", "Requires subscription for full features"],
+        "fit": "Best for writing PRDs, strategy docs, and content that requires careful reasoning"
+      },
+      {
+        "name": "Gemini",
+        "pros": ["Google Search integration", "Works with Google Workspace", "Good for research-heavy writing"],
+        "cons": ["Less detailed than competitors", "Free tier limitations", "Output can be brief"],
+        "fit": "Best for articles requiring current facts and citations with Google ecosystem integration"
+      }
+    ]
+  },
+  {
+    "category": "Presentations & Design",
+    "tools": [
+      {
+        "name": "Gamma",
+        "pros": ["Fastest text-to-presentation", "Modern card-based layouts", "Free tier generous"],
+        "cons": ["Less control than PowerPoint", "Export options limited", "Not ideal for complex animations"],
+        "fit": "Best for quick internal presentations and pitch decks when speed matters"
+      },
+      {
+        "name": "Canva Business",
+        "pros": ["All-in-one design tool", "Huge template library", "Brand kit management"],
+        "cons": ["Can look 'template-y'", "Learning curve for advanced features", "Team plan costs add up"],
+        "fit": "Best for marketing collateral, social media graphics, and polished visual content"
+      }
+    ]
+  },
+  {
+    "category": "Data & Analytics",
+    "tools": [
+      {
+        "name": "Power BI",
+        "pros": ["Natural language Q&A", "Microsoft ecosystem integration", "Interactive dashboards"],
+        "cons": ["Windows-centric", "Steeper learning curve", "Complex data modeling"],
+        "fit": "Best for Microsoft shops needing self-service BI with AI-powered insights"
+      }
+    ]
+  },
+  {
+    "category": "Video Creation",
+    "tools": [
+      {
+        "name": "HeyGen",
+        "pros": ["Realistic AI avatars", "No filming required", "Multi-language support"],
+        "cons": ["Can feel impersonal", "Limited free credits", "Avatar quality varies"],
+        "fit": "Best for training videos, product demos, and localized content at scale"
+      },
+      {
+        "name": "Loom",
+        "pros": ["Dead simple to use", "Instant sharing", "AI summaries and chapters"],
+        "cons": ["Basic editing features", "Storage limits on free plan", "Less control than pro tools"],
+        "fit": "Best for quick async updates, walkthroughs, and team communication"
+      }
+    ]
+  },
+  {
+    "category": "Workflow Automation",
+    "tools": [
+      {
+        "name": "Zapier",
+        "pros": ["6,000+ app integrations", "Easy to learn", "Reliable and battle-tested"],
+        "cons": ["AI features are add-ons", "Can get expensive at scale", "Linear workflows only"],
+        "fit": "Best for connecting apps and simple 'if this then that' automations"
+      }
+    ]
+  }
+]

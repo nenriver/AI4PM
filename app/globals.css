@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0F172A;
+  --background: #FFFFFF;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Timeline styles */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: calc(100% - 40px);
+  background: linear-gradient(to bottom, #3B82F6, #8B5CF6);
+  border-radius: 2px;
+  top: 20px;
+}
+
+/* Dot pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(59, 130, 246, 0);
+  }
+}
+
+.dot-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth expand animation */
+.expand-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.expand-enter-active {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}

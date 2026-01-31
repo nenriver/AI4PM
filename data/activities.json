@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "time": "9:00 AM",
+    "title": "Morning Planning",
+    "description": "Check emails, daily planning & prioritization",
+    "why": "Starting the day organized sets the tone for productivity",
+    "howAiHelps": "AI can summarize overnight emails, highlight urgent items, and suggest task priorities based on deadlines and importance",
+    "recommendation": "Microsoft 365 Copilot delivers strong AI assistance within Microsoft applications, but its scope is primarily limited to the Microsoft ecosystem. Glean, operating on top of the Microsoft environment, adds value by unifying information retrieval across tools, improving discoverability of institutional knowledge, and providing contextual AI assistance for daily tasks beyond individual applications.",
+    "tools": [
+      {
+        "name": "Microsoft 365 Copilot",
+        "description": "AI in Outlook for email summarization and drafting responses",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/copilot",
+        "videoId": "d-CuF6dlqLg"
+      },
+      {
+        "name": "Glean",
+        "description": "Enterprise AI search across emails, Slack, Drive, and all your tools",
+        "url": "https://www.glean.com",
+        "videoId": "7P-C3I0XM1M",
+        "justifications": {
+          "title": "What Glean Adds on Top of Microsoft 365 Copilot",
+          "items": [
+            "Enterprise-wide contextual AI knowledge that unifies data across systems",
+            "AI assistant that works inside and outside Microsoft apps with precise enterprise context",
+            "Actionable AI agents that automate work across apps",
+            "Unified search + AI actions across 100+ connectors, not just Microsoft apps",
+            "Desktop and overlay AI assistance that surfaces help wherever you work",
+            "Security and deployment flexibility in Azure with enterprise controls"
+          ],
+          "imageUrl": "/Glean comparison.png"
+        }
+      }
+    ],
+    "videoId": ""
+  },
+  {
+    "id": 2,
+    "time": "9:30 AM",
+    "title": "Customer Meeting",
+    "description": "Talking to customers and stakeholders",
+    "why": "Customer insights drive product decisions and roadmap priorities",
+    "howAiHelps": "AI transcribes conversations in real-time, extracts key themes, and generates actionable summaries with follow-up items",
+    "recommendation": "While Zoom and Teams offer AI transcription capabilities, Otter.ai's ability to work across platforms and support in-meeting queries of past records offers greater efficiency and productivity. Glean can potentially replace Otter.ai if the meeting notes are captured cleanly and consistently.",
+    "tools": [
+      {
+        "name": "Otter.ai",
+        "description": "Real-time transcription with AI meeting summaries",
+        "url": "https://otter.ai",
+        "videoId": "fD9k9yxgHE8",
+        "justifications": {
+          "title": "Why Otter.ai when Zoom & Teams already have AI?",
+          "items": [
+            "Cross-platform unified search across Zoom, Teams, and Google Meet meetings",
+            "Often higher transcription quality in real-world, multi-speaker discussions",
+            "Rich, readable AI summaries with action items and speaker attribution",
+            "Shareable highlights and clips without exposing full recordings",
+            "Captures external customer and vendor meetings across platforms",
+            "Real-time collaboration plus AI Q&A over historical meeting transcripts",
+            "Integrates beyond Microsoft and Zoom ecosystems (Slack, Notion, etc.)",
+            "No dependency on meeting host or tenant settings",
+            "Acts as a persistent, searchable knowledge base of conversations",
+            "Lower friction sharing for mixed internal/external audiences"
+          ]
+        }
+      }
+    ],
+    "otherTools": [
+      {"name": "Fireflies.ai", "url": "https://fireflies.ai", "note": "Auto-joins meetings, extracts action items, CRM integration"}
+    ],
+    "videoId": ""
+  },
+  {
+    "id": 3,
+    "time": "11:00 AM",
+    "title": "Writing Docs & Blogs",
+    "description": "PRDs, specs, blog posts, or internal documentation",
+    "why": "Clear documentation aligns teams and communicates product vision",
+    "howAiHelps": "AI assists with structure, drafting, editing, and ensuring consistency across documents",
+    "recommendation": "All LLMs can write well structured technical content with clarity and good accuracy. Gemini did a bit poorly compared to ChatGPT and Claude in this limited writing samples, potentially because I am using a free version of the LLM. I am slightly biased towards ChatGPT's responses, it includes relevant content I expect to see. It also included graphics to illustrate CDC crossings. In my coding experiments, I find Claude Code is usually fast but leaves holes, whereas ChatGPT Codex is more thorough.",
+    "tools": [
+      {
+        "name": "Gemini",
+        "description": "Google's AI for writing and analysis with deep search integration",
+        "url": "https://gemini.google.com"
+      },
+      {
+        "name": "ChatGPT",
+        "description": "OpenAI's versatile AI assistant for writing and content creation",
+        "url": "https://chat.openai.com"
+      },
+      {
+        "name": "Claude",
+        "description": "Advanced AI for long-form writing, analysis, and nuanced content",
+        "url": "https://claude.ai"
+      }
+    ],
+    "writingComparison": {
+      "prompts": [
+        {
+          "id": 1,
+          "title": "AI Writing Tools",
+          "prompt": "What is the best writing tool for technical blogs and articles, between Gemini, ChatGPT, and Claude?",
+          "responses": {
+            "gemini": "Choosing the \"best\" tool for technical writing depends on where you are in the writing process—researching, drafting, or coding. In 2026, the consensus among technical content creators is that while Claude produces the best prose, Gemini is the strongest for research, and ChatGPT remains the most versatile all-rounder.\n\n**Side-by-Side Comparison**\n\n| Feature | Claude (Opus/Sonnet 4.5) | Gemini (3 Pro/Advanced) | ChatGPT (GPT-5.2/o1) |\n|---------|--------------------------|-------------------------|----------------------|\n| Writing Style | Winner. Human-like, nuanced, and avoids \"AI-isms.\" | Informative and structured; great for tutorials. | Versatile but can feel \"robotic\" or overly cheerful. |\n| Technical Accuracy | High. Excellent at complex logic and code refactoring. | Strong, especially for Google/Android stacks. | Good, but prone to \"hallucinating\" outdated libraries. |\n| Context Window | Large (200K+). Great for analyzing existing docs. | Winner (1M+). Best for summarizing entire repos. | Medium (128K-400K). Best for discrete, modular tasks. |\n| Research Power | Limited real-time web access. | Winner. Native Google Search integration is elite. | Strong via SearchGPT, but less \"multimodal.\" |\n| Unique Feature | Artifacts: Side-by-side code/preview window. | Workspace Integration: Direct export to Google Docs. | Canvas: Interactive, inline editing of drafts. |\n\n**Which One Should You Use?**\n\n**1. Choose Claude for: The \"Human\" Polish**\nIf your goal is to write a deep-dive architectural piece or an opinionated technical essay, Claude is the gold standard. It has the best \"ear\" for tone and is least likely to use fluff.\n\nBest for: Technical documentation, white papers, and complex debugging tutorials.\n\nThe Edge: It follows instructions for \"clean code\" better than its peers, ensuring your snippets are production-ready.\n\n**2. Choose Gemini for: Research & Large Repos**\nIf your article requires pulling data from recent API releases, YouTube tutorials, or analyzing a 50-file GitHub repository, Gemini is the best choice.\n\nBest for: \"State of the Industry\" reports, tutorials on brand-new frameworks, and ecosystem-heavy guides (GCP, Firebase).\n\nThe Edge: The ability to \"talk to your codebase\" via its massive context window makes it a superior research assistant.\n\n**3. Choose ChatGPT for: Speed & Structure**\nChatGPT remains the most efficient tool for brainstorming outlines, generating SEO-friendly metadata, and creating marketing-focused technical blogs.\n\nBest for: Quick \"How-to\" blogs, LinkedIn technical summaries, and rapid prototyping.\n\nThe Edge: Its Canvas feature allows you to highlight specific paragraphs and ask for technical rewrites without regenerating the whole article.\n\n**The Professional Workflow**\nMost high-end technical writers in 2026 don't pick just one; they use a \"Model Stack\":\n\n1. Research & Outline: Use Gemini to scan documentation and YouTube for the latest updates.\n2. Drafting: Use Claude to write the technical sections and code explanations for clarity.\n3. Refining: Use ChatGPT's Canvas to polish the intro/outro and optimize for SEO.",
+            "chatgpt": "There isn't a universally agreed single best model for writing technical blogs and articles — instead, each of ChatGPT, Gemini, and Claude has strengths depending on what you emphasize (e.g., clarity, detail, research depth, integration with tools). Here's a structured comparison based on recent third-party analyses and reported user experiences:\n\n**📊 1. ChatGPT (OpenAI) — Best All-Around Writing and Structure**\n\n*Strengths*\n• Strong general-purpose writing quality — clear explanations, structured output, and conversational editing help.\n• Excellent with complex writing tasks including marketing, documentation, and technical content.\n• Flexible across styles and formats with good prompt controls.\n\n*Considerations*\n• Can be less specialized for deep enterprise publishing than Claude in some edge cases.\n\n*Best for*\n✔ Online technical articles, tutorials, and documentation\n✔ Broad topic coverage with integrated reasoning\n✔ Writers who want a balance of clarity, structure, and tone\n\n**🧠 Claude (Anthropic) — Best for Deep, Structured Writing**\n\n*Strengths*\n• Frequently praised for clarity, coherence, and detailed long-form content.\n• Tends to produce thoughtful, well-reasoned prose that suits technical explanations and analysis.\n• Often preferred in research-heavy contexts and high-stakes writing.\n\n*Considerations*\n• Lacks the multimodal and ecosystem integration (e.g., search, workplace tools) of Gemini or ChatGPT.\n\n*Best for*\n✔ In-depth, technical explanations and analytical pieces\n✔ Academic-style writing or tightly argued content\n✔ Writers who value precision and structured detail\n\n**🔍 Gemini (Google) — Strong for Research-Linked Writing**\n\n*Strengths*\n• Integrates closely with search and Google ecosystem (Docs, Gmail), giving good real-time research context.\n• Good at pulling up-to-date information, summaries, and references.\n\n*Considerations*\n• Some comparative tests find it produces less detailed narrative out of the box than ChatGPT or Claude.\n\n*Best for*\n✔ Articles that require current facts and citations\n✔ Writers who leverage Google Workspace in their workflow\n✔ Research-heavy drafts you want to flesh out quickly\n\n**🧩 Summary Guideline**\n| Priority | Best Pick |\n|----------|----------|\n| Deep, structured technical writing | Claude |\n| Balanced style + broad topic coverage | ChatGPT |\n| Research + real-time info integration | Gemini |\n\n**📌 Practical Recommendation**\n• If your priority is clarity, coherence, and polished technical prose: start with Claude.\n• If you need flexibility and broad capability (writing + editing + brainstorming): go with ChatGPT.\n• If your draft requires current research and tool integration: use Gemini, possibly in combination with another model to refine style.\n\n**🔄 Bonus: Combined Workflow (often best in practice)**\nMany professional writers use multiple tools:\n1. Gemini for initial research and fact gathering\n2. Claude for drafting detailed sections\n3. ChatGPT for polishing, structure, and editing\n\nThis hybrid approach often yields the most reliable and publishable technical content.",
+            "claude": "I should be upfront: I'm one of the options here, so I have an inherent bias. That said, I can offer some honest observations:\n\n**Each has different strengths:**\n\n**Claude (me):** I tend to be strong at longer-form, nuanced writing with attention to structure and clarity. I'm generally good at maintaining a consistent voice and following detailed stylistic instructions. I also tend to be careful about accuracy and will flag when I'm uncertain.\n\n**ChatGPT:** Has strong general writing capabilities and a massive user base, which means lots of community resources, plugins, and integrations. The GPT-4 variants are solid all-around performers for technical content.\n\n**Gemini:** Benefits from tight Google integration, which can be useful if you're working within the Google ecosystem. It has strong capabilities for research-adjacent tasks given its access to Google Search.\n\n**The honest answer:** \"Best\" depends heavily on your specific workflow, what you're writing about, and personal preference. Many technical writers use multiple tools and find each shines in different contexts. The differences between top-tier models have narrowed considerably—all three can produce good technical content.\n\n**My suggestion:** Try all three with the same technical article prompt and see which output resonates with your style and needs. Most have free tiers that let you experiment. Your own judgment of the results will be more useful than any recommendation I can give, especially since I can't objectively evaluate myself against competitors.\n\nWhat kind of technical content are you writing? I might be able to offer more specific thoughts."
+          },
+          "ratings": {
+            "accuracy": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐" },
+            "clarity": { "gemini": "⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "structure": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐" },
+            "technicalDepth": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐", "claude": "⭐⭐⭐" }
+          }
+        },
+        {
+          "id": 2,
+          "title": "Formal Verification",
+          "prompt": "Write three paragraphs about what is formal verification, how it is different from simulation, where it can be used for.",
+          "responses": {
+            "gemini": "**Understanding Formal Verification**\n\nFormal Verification is a rigorous mathematical approach used to prove that a hardware or software system satisfies a specific set of requirements or properties. Unlike traditional testing, which relies on trial and error, formal verification uses mathematical logic to exhaustively analyze the system's design. By creating a formal model of the system and expressing its intended behavior through logic formulas, engineers can use automated tools—such as model checkers or theorem provers—to ensure that the system will function correctly under every possible set of inputs and conditions. It essentially turns \"I think this works\" into \"I can prove this works.\"\n\nThe fundamental difference between formal verification and simulation (or testing) lies in coverage. Simulation involves running the system with a specific set of input vectors to see if it produces the correct output; however, as systems grow in complexity, the number of possible states becomes astronomical, making it impossible to test every scenario. This leaves \"corner cases\" where bugs can hide. Formal verification, conversely, does not use test vectors. Instead, it explores the entire state space of the design simultaneously. While simulation can show the presence of bugs, formal verification is designed to prove their total absence within the defined properties.\n\nBecause of its high level of certainty, formal verification is primarily used in safety-critical and mission-critical domains where failure is not an option. It is a staple in semiconductor design (ASICs and FPGAs) to prevent multi-billion dollar hardware recalls, and in aerospace and automotive engineering for flight control and autonomous driving systems. Beyond hardware, it is increasingly applied to smart contracts in blockchain to prevent exploits, and in the development of secure microkernels where a single vulnerability could compromise an entire network. Any environment where the \"cost of failure\" outweighs the \"cost of proof\" is a prime candidate for this methodology.",
+            "chatgpt": "Formal verification is a mathematically rigorous approach to verifying the correctness of hardware and systems designs. Instead of testing a design with selected input scenarios, formal verification models the design and its requirements as mathematical objects and then proves whether the requirements always hold. These requirements are typically expressed as properties—such as safety (\"this bad thing never happens\") or liveness (\"this good thing eventually happens\")—written in assertion languages. If a property fails, formal tools produce a precise counterexample showing exactly how and why the failure occurs, making root-cause analysis highly deterministic.\n\nFormal verification differs fundamentally from simulation in both methodology and coverage. Simulation validates a design by executing it over time with specific test vectors, which means it can only observe behaviors that are explicitly exercised. Even with extensive regression suites, simulation inevitably leaves gaps because the input space and state space are too large to exhaustively explore. Formal verification, by contrast, explores all possible legal behaviors of the design within the defined constraints, without requiring testbenches or stimulus. This makes formal especially powerful for corner cases, complex control logic, concurrency, and scenarios that are extremely difficult—or practically impossible—to reach with simulation alone.\n\nFormal verification is commonly used for block-level and system-level verification tasks where completeness and correctness are critical. Typical applications include control logic validation, protocol compliance, arbitration and coherency logic, security properties, low-power intent checking, and equivalence checking between different design representations (such as RTL-to-RTL or RTL-to-gate). It is also widely applied in safety-critical domains like automotive, aerospace, and industrial systems, as well as in advanced SoC designs where state explosion makes simulation insufficient. In practice, formal verification complements simulation: simulation excels at validating data-path behavior and performance under realistic workloads, while formal provides exhaustive guarantees for correctness-sensitive logic.",
+            "claude": "Formal verification is a mathematical approach to proving that a system—whether hardware or software—behaves correctly according to its specification. Rather than running test cases and checking outputs, formal verification uses mathematical logic, theorem proving, and model checking to exhaustively analyze all possible states and behaviors of a design. The goal is to provide a rigorous proof that certain properties always hold (such as \"the system never deadlocks\" or \"this variable never exceeds a given value\") or to find a counterexample that demonstrates a bug. Because it reasons about the design abstractly, formal verification can catch corner-case bugs that would be nearly impossible to encounter through random or directed testing.\n\nThe key difference between formal verification and simulation lies in coverage. Simulation runs a finite set of test vectors through a model and observes whether the outputs match expectations—it can only check the specific scenarios you test. Even with millions of test cycles, simulation explores only a tiny fraction of the possible state space of a complex design. Formal verification, by contrast, considers all reachable states simultaneously through symbolic reasoning. If a formal tool says a property holds, it means the property holds for every possible input sequence, not just the ones someone thought to test. The tradeoff is that formal methods can be computationally expensive and may struggle with very large state spaces, which is why the two approaches are often used together: simulation for broad functional testing and formal methods for targeted verification of critical properties.\n\nFormal verification is widely used in domains where correctness is paramount and bugs carry severe consequences. In hardware design, it verifies processor pipelines, cache coherence protocols, bus arbitration logic, and security-critical control paths. In software, it appears in verified compilers, operating system kernels, cryptographic implementations, and safety-critical embedded systems for aerospace and automotive applications. The technique is also essential in protocol verification, where it can prove that communication protocols maintain properties like mutual exclusion or freedom from livelock. As designs grow more complex and the cost of post-silicon bugs increases, formal verification has shifted from a niche specialty to a standard part of the verification toolkit in many industries."
+          },
+          "ratings": {
+            "accuracy": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "clarity": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "structure": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "technicalDepth": { "gemini": "⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" }
+          }
+        },
+        {
+          "id": 3,
+          "title": "CDC Verification",
+          "prompt": "Explain what is clock domain crossing verification and why it is important",
+          "responses": {
+            "gemini": "In the world of high-performance hardware design, Clock Domain Crossing (CDC) occurs when data is transferred from a logic block driven by one clock signal to another block driven by a different, asynchronous clock. Because these clocks may have different frequencies or phases, the destination registers may capture the data at the exact moment it is changing.\n\n**The Science of the \"Glitch\": Metastability**\n\nThe primary reason CDC verification is critical is a physical phenomenon called metastability. In digital logic, a flip-flop needs a stable input for a specific window (setup and hold time) to correctly register a \"0\" or a \"1.\"\n\nWhen a signal crosses a clock boundary asynchronously, the destination clock may sample the data right as it toggles. This causes the transistor to enter a state where the output voltage hovers between high and low, neither a logical 0 nor 1. This \"unsettled\" state can propagate through the rest of the chip, leading to unpredictable behavior, system hangs, or corrupted data.\n\n**Why CDC Verification is Mandatory**\n\nTraditional functional simulation often fails to catch CDC issues because simulators assume \"ideal\" timing. CDC verification is vital for several reasons:\n\n• **Non-Deterministic Failures:** Metastability is probabilistic. A chip might work perfectly in the lab but crash once every 100 hours in the field due to a specific thermal or voltage condition.\n\n• **The Inadequacy of Testing:** Since simulation doesn't usually model the random phase shifts between clocks, you can have 100% code coverage and still have a \"broken\" design.\n\n• **Data Integrity:** In multi-core processors or complex SoCs (Systems on Chip), data must move between different speeds (e.g., a fast CPU and a slower peripheral). Without proper synchronizers (like 2-stage flip-flops or Handshake protocols), the data can be \"sampled\" twice or missed entirely.\n\n**How Verification is Performed**\n\nEngineers use Structural CDC Analysis tools to scan the Netlist or RTL code. These tools look for:\n\n• **Unsynchronized Crossings:** Signals moving between domains without a recognized synchronization scheme.\n\n• **Convergence:** Multiple signals crossing and then combining, which can cause \"re-convergence glitches\" where the timing relationship between those bits is lost.\n\n• **Complex Protocols:** Ensuring that FIFOs (First-In-First-Out buffers) used for crossing data have correctly synchronized read/write pointers.",
+            "chatgpt": "Clock Domain Crossing (CDC) verification is the process of ensuring that signals transferred between different clock domains in a digital design behave correctly and reliably. A clock domain is defined by a clock signal and its associated timing assumptions; when data moves from one domain to another with a different clock (frequency, phase, or even asynchronous relationship), standard synchronous timing guarantees no longer apply. Without proper handling, these crossings can lead to metastability, data corruption, or intermittent functional failures that may only appear in silicon. CDC verification focuses on identifying all such crossings and checking that appropriate synchronization or communication schemes are used.\n\nCDC issues arise because a signal launched by one clock can be sampled at an unsafe time by another clock. If the sampling occurs near a transition, the receiving flip-flop can enter a metastable state, producing unpredictable results that may propagate through the design. To mitigate this, designers use well-known structures such as multi-flop synchronizers for single-bit control signals, handshaking protocols for coordinated transfers, and asynchronous FIFOs for multi-bit data paths. CDC verification checks not only that these structures exist, but that they are used correctly—for example, ensuring synchronizers are not optimized away, control signals are not treated as data buses, and FIFO pointers are safely synchronized.\n\nCDC verification is important because CDC bugs are among the hardest to detect with simulation. They depend on precise clock alignment and rare timing conditions that are unlikely to be exercised by testbenches, yet can cause catastrophic failures in real hardware. Static CDC analysis and formal CDC verification exhaustively analyze the design structure to flag unsafe crossings, missing synchronizers, reconvergence issues, and protocol violations—without requiring stimulus. In modern SoCs with dozens or hundreds of clock domains driven by power management, performance scaling, and IP reuse, CDC verification is essential to achieve robust, silicon-proven designs and to avoid costly late-stage or post-silicon failures.",
+            "claude": "Clock domain crossing verification is the process of ensuring that signals passing between different clock domains in a digital design are handled correctly and do not cause functional failures. In modern chips, it is common to have multiple clock domains—regions of logic operating on different clocks that may vary in frequency, phase, or source. Whenever a signal originating in one clock domain is sampled by logic in another, there is an inherent risk of metastability: the receiving flip-flop may capture the signal during its transition, causing the output to settle to an unpredictable value or oscillate before resolving. CDC verification identifies all points where signals cross domain boundaries and checks that appropriate synchronization structures, such as two-flop synchronizers, handshake protocols, or asynchronous FIFOs, are in place to mitigate these risks.\n\nThe importance of CDC verification stems from the fact that metastability-related bugs are notoriously difficult to detect through simulation. Because metastability is a probabilistic electrical phenomenon that depends on precise timing relationships, a simulation running with ideal timing models will almost never expose it. A design can pass millions of simulation cycles and still fail intermittently in silicon when signals happen to change at exactly the wrong moment relative to the receiving clock edge. These failures are sporadic, temperature-dependent, and extremely hard to debug after fabrication. CDC verification tools use static analysis to examine the design structurally, flagging missing or improper synchronizers, reconvergence issues where multiple CDC paths recombine unsafely, and control signals that lack proper synchronization even when data paths are protected.\n\nBeyond metastability, CDC verification also catches subtler problems related to data coherency and protocol correctness. For example, a multi-bit bus crossing a clock boundary without proper encoding or handshaking can arrive with different bits updating at different times, producing transient garbage values. Similarly, control signals that are supposed to be mutually exclusive may temporarily violate that constraint when viewed from the receiving domain. Thorough CDC verification examines reset synchronization, gray-code correctness on FIFO pointers, pulse synchronization for single-cycle strobes, and the structural integrity of handshake state machines. Because fixing CDC bugs in silicon is often impossible without a respin, catching these issues during RTL verification is critical to avoiding costly schedule delays and ensuring the chip functions reliably across all operating conditions."
+          },
+          "ratings": {
+            "accuracy": { "gemini": "⭐⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "clarity": { "gemini": "⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "structure": { "gemini": "⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" },
+            "technicalDepth": { "gemini": "⭐⭐⭐⭐", "chatgpt": "⭐⭐⭐⭐⭐", "claude": "⭐⭐⭐⭐⭐" }
+          }
+        }
+      ]
+    },
+"videoId": ""
+  },
+  {
+    "id": 4,
+    "time": "1:30 PM",
+    "title": "Presentation Creation",
+    "description": "Creating slides and visual narratives",
+    "why": "Compelling presentations secure stakeholder buy-in and communicate strategy",
+    "howAiHelps": "AI generates complete slide decks from prompts, suggests layouts, and creates visuals automatically",
+    "recommendation": "I am really impressed with Gamma by how fast it is able to generate the PPT according to what I ask. It is very easy to use. I include Canva because it is feature rich, though it can feel overwhelming.",
+    "tools": [
+      {
+        "name": "Gamma",
+        "description": "AI prompt-to-deck that generates full presentations from text",
+        "url": "https://gamma.app",
+        "videoId": "KcbXKUR7-a0",
+        "embedUrl": "https://www.loom.com/embed/f388ad92db2f44a6b3eb21b40ceb585e",
+        "exampleUrl": "/Gamma-example.pptx"
+      },
+      {
+        "name": "Canva Business",
+        "description": "All-in-one design with AI-powered slide and visual creation",
+        "url": "https://www.canva.com",
+        "videoId": "CSlQtvLRhVk",
+        "embedUrl": "https://www.loom.com/embed/71d79950583040f49cf19ed3ae7009dd",
+        "exampleUrl": "/canva-example.pptx"
+      }
+    ],
+    "otherTools": [
+      {"name": "Beautiful.ai", "url": "https://www.beautiful.ai", "note": "Generated presentations look plain and did not include content I asked for", "exampleUrl": "/Beautiful-ai-example.pptx"}
+    ],
+    "videoId": ""
+  },
+  {
+    "id": 5,
+    "time": "3:00 PM",
+    "title": "Data & Metrics Review",
+    "description": "Analyzing product usage and business data",
+    "why": "Data-driven decisions lead to better product outcomes",
+    "howAiHelps": "AI enables natural language queries on dashboards and automatically surfaces insights from complex datasets",
+    "recommendation": "I have explored a few options. Given we are in the Microsoft ecosystem and spreadsheet centric, Power BI offers sufficient features for our day to day use.",
+    "tools": [
+      {
+        "name": "Power BI",
+        "description": "Natural language Q&A and AI-powered insights on dashboards",
+        "url": "https://powerbi.microsoft.com",
+        "videoId": "VaOhNqNtGGE",
+        "screenshotUrl": "/PowerBI Screen Shot.png",
+        "detailedContent": {
+          "title": "What Power BI Adds Beyond Excel (in plain terms)",
+          "sections": [
+            {
+              "heading": "1. Interactive Dashboards (not static charts)",
+              "intro": "Excel charts are mostly static. Power BI dashboards are fully interactive.",
+              "bullets": ["Click one bar → entire dashboard filters", "Slice by customer, product, region, time instantly", "Drill down (Year → Quarter → Month) without new charts"],
+              "note": "This is night and day for management reviews."
+            },
+            {
+              "heading": "2. Automatic Data Modeling",
+              "intro": "In Excel, you manually VLOOKUP/XLOOKUP, maintain pivot relationships, and risk broken formulas.",
+              "bullets": ["Builds a semantic model (tables + relationships)", "Understands customers, products, dates as entities", "Keeps logic centralized and reusable"],
+              "note": "This matters when data grows or changes."
+            },
+            {
+              "heading": "3. DAX = Business Logic Layer",
+              "intro": "Excel formulas are cell-based. Power BI uses DAX, which is context-aware.",
+              "bullets": ["Revenue per customer within selected filters", "Contribution % automatically recalculated", "Time intelligence (YoY, MoM, rolling averages) with one formula"],
+              "note": "In Excel, this is fragile and repetitive."
+            },
+            {
+              "heading": "4. True What-If Analysis (Sliders, Not Copies)",
+              "intro": "Excel what-if usually means duplicate sheets, scenario tables, and manual toggling.",
+              "bullets": ["What-If Parameters", "Interactive sliders (price, volume, churn, discount)", "Instant recalculation across all visuals"],
+              "note": "This is huge for leadership conversations."
+            },
+            {
+              "heading": "5. Always-Up-to-Date Dashboards",
+              "intro": "Excel: someone emails a file, forgets to refresh, versions get out of sync.",
+              "bullets": ["Connects directly to Excel/Sheets/databases", "Scheduled refresh", "Single source of truth", "Everyone sees the same numbers"],
+              "note": "This alone justifies Power BI in many orgs."
+            },
+            {
+              "heading": "6. Executive-Grade Visuals",
+              "intro": "Excel visuals are fine. Power BI visuals are designed for decision-making.",
+              "bullets": ["Waterfall charts for revenue change", "Decomposition trees (why did revenue drop?)", "KPI cards with trend context", "Drill-through pages per customer or product"],
+              "note": "These are difficult or clunky in Excel."
+            },
+            {
+              "heading": "7. Governance & Sharing",
+              "intro": "Excel: files get copied, logic gets modified accidentally, access control is weak.",
+              "bullets": ["Role-based access (who sees what)", "Controlled publishing", "Shared dashboards without exposing raw data"],
+              "note": "Critical once leadership is involved."
+            }
+          ],
+          "excelAdvantages": {
+            "title": "What Excel Is Still Better At",
+            "intro": "Power BI is not a replacement for everything. Excel wins at:",
+            "bullets": ["Ad-hoc exploration", "Small datasets", "One-off analysis", "Manual modeling", "Quick calculations"],
+            "conclusion": "Best practice: Excel → analyze, Power BI → communicate and decide"
+          }
+        }
+      }
+    ],
+    "otherTools": [
+      {"name": "Lucanet", "url": "https://www.lucanet.com", "note": "Better for what-if analysis and financial forecasting", "videoUrl": "https://youtu.be/764ipVp8L84"},
+      {"name": "Tableau", "url": "https://www.tableau.com", "note": "More targeted for exploration and discovering insights with advanced visuals", "videoUrl": "https://youtu.be/6xv1KvCMF1Q"}
+    ],
+    "videoId": ""
+  },
+  {
+    "id": 6,
+    "time": "4:30 PM",
+    "title": "Create Promotion Video",
+    "description": "Creating marketing or demo videos to communicate product value",
+    "why": "Video content increases engagement and helps explain complex features quickly",
+    "howAiHelps": "AI generates scripts, creates avatar-based videos, and automates editing for professional results without filming",
+    "tools": [
+      {
+        "name": "HeyGen",
+        "description": "AI video generation with realistic avatars and voices",
+        "url": "https://www.heygen.com",
+        "videoId": "t46-22Ocv9o",
+        "embedUrl": "https://app.heygen.com/embedded-player/8157f4b6408642f5a66855cad6fa07d9"
+      },
+      {
+        "name": "Loom",
+        "description": "Quick screen recording with AI summaries and chapters",
+        "url": "https://www.loom.com",
+        "videoId": "X_ptEt4pYhw",
+        "embedUrl": "https://www.loom.com/embed/fa0fc22f7fd946f08f015bd0832117e6"
+      }
+    ],
+    "otherTools": [
+      {"name": "Descript", "url": "https://www.descript.com", "note": "Not pleased with the quality of video generation"},
+      {"name": "Synthesia", "url": "https://www.synthesia.io", "note": "User experience is not as smooth"}
+    ],
+    "videoId": ""
+  },
+  {
+    "id": 7,
+    "time": "5:30 PM",
+    "title": "Workflow Automation",
+    "description": "Automating repetitive tasks and building AI-powered workflows",
+    "why": "Automation frees up time for strategic work and ensures consistency in routine tasks",
+    "howAiHelps": "AI can chain multiple tasks together - pull data from Jira, analyze trends, generate reports, create meeting agendas, and send updates automatically",
+    "tools": [
+      {
+        "name": "Zapier",
+        "description": "Connect 6,000+ apps with AI-powered automation",
+        "url": "https://zapier.com",
+        "videoId": "JtdUgJGI_Oo",
+        "embedUrl": "https://www.loom.com/embed/8a777d2ab0c74118afa839f10ca90913",
+        "justifications": {
+          "title": "Other Workflows That Can Use Automation",
+          "items": [
+            "Event management (sign up, follow up, reminder, feedback flow)",
+            "Competition tracking (latest updates and development)",
+            "Meeting notes to decision log distribution",
+            "Blog post automation (research, ideation, writing, reviewing, posting)",
+            "Weekly sales meeting agenda (Jira update, meeting agenda)",
+            "Lead generation and nurture flow (collateral asset, leads, nurture journey)"
+          ]
+        }
+      }
+    ],
+    "otherTools": [
+      {"name": "Gumloop", "url": "https://www.gumloop.com", "note": "No-code AI workflow builder for complex automation chains", "videoUrl": "https://youtu.be/VY55N6vNP20"},
+      {"name": "n8n", "url": "https://n8n.io", "note": "Open source option but requires more technical setup", "videoUrl": "https://youtu.be/_Wf0NikMyAA"}
+    ],
+    "videoId": ""
+  }
+]
