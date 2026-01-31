@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import SurveyResults from '@/components/SurveyResults'
 import Timeline from '@/components/Timeline'
 import ToolsSummary from '@/components/ToolsSummary'
 import PoemSection from '@/components/PoemSection'
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <SurveyResults />
       <Timeline />
       <ToolsSummary />
       <PoemSection />
