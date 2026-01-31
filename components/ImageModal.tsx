@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { getAssetPath } from '@/lib/utils'
 
 interface ImageModalProps {
   src: string
@@ -9,6 +10,7 @@ interface ImageModalProps {
 
 export default function ImageModal({ src, alt }: ImageModalProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const imageSrc = getAssetPath(src)
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function ImageModal({ src, alt }: ImageModalProps) {
         onClick={() => setIsOpen(true)}
       >
         <img
-          src={src}
+          src={imageSrc}
           alt={alt}
           className="w-full h-full object-contain hover:opacity-90 transition-opacity"
         />
@@ -38,7 +40,7 @@ export default function ImageModal({ src, alt }: ImageModalProps) {
               </svg>
             </button>
             <img
-              src={src}
+              src={imageSrc}
               alt={alt}
               className="w-full h-full object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}

@@ -1,5 +1,7 @@
 'use client'
 
+import { getAssetPath } from '@/lib/utils'
+
 export default function PoemSection() {
   return (
     <section className="py-16 px-6 bg-slate-900">
@@ -15,7 +17,7 @@ export default function PoemSection() {
           {/* Left side - Image */}
           <div className="w-full md:w-1/2 flex-shrink-0">
             <img
-              src="/Poem image.png"
+              src={getAssetPath('/Poem image.png')}
               alt="AI PM illustration"
               className="w-full h-full object-cover rounded-xl"
             />

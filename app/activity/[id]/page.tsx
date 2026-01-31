@@ -3,6 +3,7 @@ import activities from '@/data/activities.json'
 import CollapsibleContent from '@/components/CollapsibleContent'
 import ImageModal from '@/components/ImageModal'
 import WritingComparison from '@/components/WritingComparison'
+import { getAssetPath } from '@/lib/utils'
 
 interface PageProps {
   params: { id: string }
@@ -116,7 +117,7 @@ export default function ActivityPage({ params }: PageProps) {
                         </a>
                         {tool.exampleUrl && (
                           <a
-                            href={tool.exampleUrl}
+                            href={getAssetPath(tool.exampleUrl)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-sm text-orange-400 hover:text-orange-300 transition-colors"
@@ -308,7 +309,7 @@ export default function ActivityPage({ params }: PageProps) {
                       )}
                       {tool.exampleUrl && (
                         <a
-                          href={tool.exampleUrl}
+                          href={getAssetPath(tool.exampleUrl)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="ml-2 text-sm text-orange-400 hover:text-orange-300 transition-colors"
