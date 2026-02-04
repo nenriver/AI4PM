@@ -41,6 +41,10 @@ interface Tool {
     imageUrl?: string
   }
   automationExamples?: string[]
+  beforeAfterExample?: {
+    before: string
+    after: string
+  }
 }
 
 interface OtherTool {
@@ -68,6 +72,13 @@ interface WritingPrompt {
   }
 }
 
+interface ToolComparison {
+  title: string
+  headers: string[]
+  rows: string[][]
+  comparisonVideoUrl?: string
+}
+
 interface Activity {
   id: number
   time: string
@@ -83,6 +94,7 @@ interface Activity {
   writingComparison?: {
     prompts: WritingPrompt[]
   }
+  toolComparison?: ToolComparison
 }
 
 interface PageProps {
@@ -227,12 +239,12 @@ export default function ActivityPage({ params }: PageProps) {
                 )}
 
                 {/* Video Embeds */}
-                {(tool.embedUrl || tool.videoId || tool.screenshotUrl) && (
-                  <div className={`${(tool.embedUrl && tool.videoId) || (tool.screenshotUrl && tool.videoId) ? 'grid md:grid-cols-2 gap-4 p-4' : 'p-4'}`}>
+                {(tool.embedUrl || tool.localVideo || tool.videoId || tool.screenshotUrl) && (
+                  <div className={`${(tool.embedUrl && tool.videoId) || (tool.localVideo && tool.videoId) || (tool.screenshotUrl && tool.videoId) ? 'grid md:grid-cols-2 gap-4 p-4' : 'p-4'}`}>
                     {/* YouTube Tutorial */}
                     {tool.videoId && (
                       <div>
-                        {(tool.embedUrl || tool.screenshotUrl) && (
+                        {(tool.embedUrl || tool.localVideo || tool.screenshotUrl) && (
                           <p className="text-sm text-slate-400 mb-2 font-medium">YouTube Tutorial</p>
                         )}
                         <div className="aspect-video">
@@ -298,6 +310,43 @@ export default function ActivityPage({ params }: PageProps) {
                   </div>
                 )}
 
+                {/* Before/After Example */}
+                {tool.beforeAfterExample && (
+                  <div className="p-6 border-t border-slate-700">
+                    <h4 className="text-lg font-semibold text-white mb-4">Before & After Example</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm text-slate-400 mb-2">Original PPT</p>
+                        <a
+                          href={getAssetPath(tool.beforeAfterExample.before)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg transition-colors text-white"
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Download Before
+                        </a>
+                      </div>
+                      <div>
+                        <p className="text-sm text-slate-400 mb-2">Gamma Updated</p>
+                        <a
+                          href={getAssetPath(tool.beforeAfterExample.after)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 rounded-lg transition-colors text-white"
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Download After
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Justifications */}
                 {tool.justifications && (
                   <div className="p-6 border-t border-slate-700">
@@ -320,6 +369,54 @@ export default function ActivityPage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Tool Comparison Table */}
+        {activity.toolComparison && (
+          <section className="mt-12">
+            <div className="bg-slate-800 rounded-xl overflow-hidden">
+              <div className="p-6 border-b border-slate-700 flex items-center justify-between flex-wrap gap-4">
+                <h2 className="text-xl font-bold text-white">{activity.toolComparison.title}</h2>
+                {activity.toolComparison.comparisonVideoUrl && (
+                  <a
+                    href={activity.toolComparison.comparisonVideoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 text-red-400 text-sm rounded-lg hover:bg-red-500/30 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    Watch Comparison Video
+                  </a>
+                )}
+              </div>
+              <div className="p-6 overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="border-b border-slate-700">
+                      {activity.toolComparison.headers.map((header: string, idx: number) => (
+                        <th key={idx} className={`pb-4 pr-4 text-sm font-semibold ${idx === 0 ? 'text-slate-400' : 'text-blue-400'}`}>
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {activity.toolComparison.rows.map((row: string[], rowIdx: number) => (
+                      <tr key={rowIdx} className="border-b border-slate-700/50 last:border-0">
+                        {row.map((cell: string, cellIdx: number) => (
+                          <td key={cellIdx} className={`py-4 pr-4 text-sm ${cellIdx === 0 ? 'font-medium text-slate-300' : 'text-slate-400'}`}>
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Writing Comparison */}
         {activity.writingComparison && (
           <section className="mt-12">
@@ -332,16 +429,26 @@ export default function ActivityPage({ params }: PageProps) {
         {/* Why These Tools Summary */}
         <section className="mt-16 p-8 bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-xl border border-slate-700">
           <h3 className="text-xl font-bold text-white mb-4">Summary</h3>
-          <p className="text-slate-300 leading-relaxed mb-6">
+          <p className="text-white leading-relaxed mb-6 whitespace-pre-line">
             {activity.recommendation ? (
               <>
-                {activity.recommendation.split(/(Microsoft 365 Copilot|Glean|Otter\.ai|Fireflies\.ai|Claude|ChatGPT|Gemini|Gamma|Canva|Power BI|Tableau|Lucanet|HeyGen|Loom|Gumloop|Zapier|Zoom|Teams?)/g).map((part: string, index: number) => {
+                {activity.recommendation.split(/(Microsoft 365 Copilot|Glean|Otter\.ai|Fireflies\.ai|Claude|ChatGPT|Gemini|Gamma|Canva|Power BI|Tableau|Lucanet|HeyGen|Loom|Gumloop|Zapier|Zoom|Teams?|Grammarly|ProWritingAid|Jasper|Copy\.ai|Writesonic|Wordtune|Quillbot|Writer\.com|Notion AI|Sudowrite)/g).map((part: string, index: number) => {
                   const allTools = [...activity.tools, ...(activity.otherTools || [])]
                   const externalProducts: Record<string, string> = {
                     'Zoom': 'https://zoom.us',
                     'Teams': 'https://www.microsoft.com/en-us/microsoft-teams',
                     'Team': 'https://www.microsoft.com/en-us/microsoft-teams',
-                    'Glean': 'https://www.glean.com'
+                    'Glean': 'https://www.glean.com',
+                    'Grammarly': 'https://www.grammarly.com',
+                    'ProWritingAid': 'https://prowritingaid.com',
+                    'Jasper': 'https://www.jasper.ai',
+                    'Copy.ai': 'https://www.copy.ai',
+                    'Writesonic': 'https://writesonic.com',
+                    'Wordtune': 'https://www.wordtune.com',
+                    'Quillbot': 'https://quillbot.com',
+                    'Writer.com': 'https://writer.com',
+                    'Notion AI': 'https://www.notion.so',
+                    'Sudowrite': 'https://www.sudowrite.com'
                   }
                   const tool = allTools.find((t: { name: string; url: string }) => t.name === part || t.name.includes(part) || part.includes(t.name.split(' ')[0]))
                   if (tool) {

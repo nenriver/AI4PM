@@ -6,7 +6,7 @@
     "description": "Check emails, daily planning & prioritization",
     "why": "Starting the day organized sets the tone for productivity",
     "howAiHelps": "AI can summarize overnight emails, highlight urgent items, and suggest task priorities based on deadlines and importance",
-    "recommendation": "Microsoft 365 Copilot delivers strong AI assistance within Microsoft applications, but its scope is primarily limited to the Microsoft ecosystem. Glean, operating on top of the Microsoft environment, adds value by unifying information retrieval across tools, improving discoverability of institutional knowledge, and providing contextual AI assistance for daily tasks beyond individual applications.",
+    "recommendation": "Microsoft 365 Copilot delivers strong AI assistance within Microsoft applications, but its scope is primarily limited to the Microsoft ecosystem.\n\nGlean, operating on top of the Microsoft environment, adds value by unifying information retrieval across tools, improving discoverability of institutional knowledge, and providing contextual AI assistance for daily tasks beyond individual applications. Glean is trusted by leading enterprises including Databricks, Duolingo, Grammarly, Zillow, Instacart, LinkedIn, Intuit, Samsung, Pinterest, and Rivian.",
     "tools": [
       {
         "name": "Microsoft 365 Copilot",
@@ -18,7 +18,7 @@
         "name": "Glean",
         "description": "Enterprise AI search across emails, Slack, Drive, and all your tools",
         "url": "https://www.glean.com",
-        "videoId": "7P-C3I0XM1M",
+        "videoId": "cWu4gqjX2G0",
         "justifications": {
           "title": "What Glean Adds on Top of Microsoft 365 Copilot",
           "items": [
@@ -42,7 +42,7 @@
     "description": "Talking to customers and stakeholders",
     "why": "Customer insights drive product decisions and roadmap priorities",
     "howAiHelps": "AI transcribes conversations in real-time, extracts key themes, and generates actionable summaries with follow-up items",
-    "recommendation": "While Zoom and Teams offer AI transcription capabilities, Otter.ai's ability to work across platforms and support in-meeting queries of past records offers greater efficiency and productivity. Glean can potentially replace Otter.ai if the meeting notes are captured cleanly and consistently.",
+    "recommendation": "While Zoom and Teams offer AI transcription capabilities, Otter.ai's ability to work across platforms and support in-meeting queries of past records offers greater efficiency and productivity. Glean can potentially replace Otter.ai if the meeting notes are captured cleanly and consistently.\n\nOtter.ai is trusted by enterprises including Salesforce, Amazon, IBM, NBC Universal, Mastercard, Walgreens, and Harvard. Users report saving over 4 hours per week with up to 95% transcription accuracy.",
     "tools": [
       {
         "name": "Otter.ai",
@@ -67,7 +67,7 @@
       }
     ],
     "otherTools": [
-      {"name": "Fireflies.ai", "url": "https://fireflies.ai", "note": "Auto-joins meetings, extracts action items, CRM integration"}
+      {"name": "Fireflies.ai", "url": "https://fireflies.ai", "note": "Auto-joins meetings, extracts action items, stronger CRM integration (Salesforce, HubSpot). Better for sales: auto-fills CRM with call logs, deal scoring, sentiment analysis for coaching. Otter excels at real-time collaboration and querying past transcripts"}
     ],
     "videoId": ""
   },
@@ -78,7 +78,7 @@
     "description": "PRDs, specs, blog posts, or internal documentation",
     "why": "Clear documentation aligns teams and communicates product vision",
     "howAiHelps": "AI assists with structure, drafting, editing, and ensuring consistency across documents",
-    "recommendation": "All LLMs can write well structured technical content with clarity and good accuracy. Gemini did a bit poorly compared to ChatGPT and Claude in this limited writing samples, potentially because I am using a free version of the LLM. I am slightly biased towards ChatGPT's responses, it includes relevant content I expect to see. It also included graphics to illustrate CDC crossings. In my coding experiments, I find Claude Code is usually fast but leaves holes, whereas ChatGPT Codex is more thorough.",
+    "recommendation": "All LLMs can write well structured technical content with clarity and good accuracy. Gemini did a bit poorly compared to ChatGPT and Claude in this limited writing samples, potentially because I am using a free version of the LLM. I am slightly biased towards ChatGPT's responses, it includes relevant content I expect to see. It also included graphics to illustrate CDC crossings. In my coding experiments, I find Claude Code is usually fast but leaves holes, whereas ChatGPT Codex is more thorough.\n\nOther writing tools include: Grammarly and ProWritingAid for grammar and polish; Jasper, Copy.ai, and Writesonic for marketing content generation; Wordtune and Quillbot for rephrasing; Writer.com and Notion AI for enterprise teams; and Sudowrite for creative writing.\n\nFor core PM writing (PRDs, specs, strategy docs), the LLMs cover most needs. For marketing content, Jasper and Copy.ai offer brand voice training and templates specifically designed for ads, landing pages, and campaigns. Grammarly remains useful for quick polish across all writing.",
     "tools": [
       {
         "name": "Gemini",
@@ -157,7 +157,7 @@
     "description": "Creating slides and visual narratives",
     "why": "Compelling presentations secure stakeholder buy-in and communicate strategy",
     "howAiHelps": "AI generates complete slide decks from prompts, suggests layouts, and creates visuals automatically",
-    "recommendation": "I am really impressed with Gamma by how fast it is able to generate the PPT according to what I ask. It is very easy to use. I include Canva because it is feature rich, though it can feel overwhelming.",
+    "recommendation": "I am really impressed with Gamma by how fast it is able to generate the PPT according to what I ask. It is very easy to use. I include Canva because it is feature rich, though it can feel overwhelming.\n\nGamma has grown to 70 million users with over 600,000 paying subscribers, and is used by Andreessen Horowitz (a16z) for market maps and internal communications.\n\nCanva is used by 95% of Fortune 500 companies including Meta, FedEx, Salesforce, McDonald's, Coca-Cola, Zoom, Nike, DocuSign, and Expedia Group, with 260 million monthly active users.",
     "tools": [
       {
         "name": "Gamma",
@@ -165,7 +165,11 @@
         "url": "https://gamma.app",
         "videoId": "KcbXKUR7-a0",
         "embedUrl": "https://www.loom.com/embed/f388ad92db2f44a6b3eb21b40ceb585e",
-        "exampleUrl": "/Gamma-example.pptx"
+        "exampleUrl": "/Gamma-example.pptx",
+        "beforeAfterExample": {
+          "before": "/AI for Marketing.pptx",
+          "after": "/Gamma-Update-Leverage-AI-In-Product-Management.pptx"
+        }
       },
       {
         "name": "Canva Business",
@@ -188,7 +192,22 @@
     "description": "Analyzing product usage and business data",
     "why": "Data-driven decisions lead to better product outcomes",
     "howAiHelps": "AI enables natural language queries on dashboards and automatically surfaces insights from complex datasets",
-    "recommendation": "I have explored a few options. Given we are in the Microsoft ecosystem and spreadsheet centric, Power BI offers sufficient features for our day to day use.",
+    "recommendation": "I have explored a few options. Given we are in the Microsoft ecosystem and spreadsheet centric, Power BI offers sufficient features for our day to day use. Power BI is used by 97% of Fortune 500 companies and has over 30 million active monthly users across 100,000+ organizations.\n\nThat said, Tableau remains the gold standard for data visualization and exploratory analysis. Its drag-and-drop interface makes it incredibly intuitive for discovering insights, and its visualization capabilities are unmatched. Since we have access to Tableau, it's worth using for more complex analyses, executive presentations, or when you need to explore data from multiple sources. Tableau is used by over 120,000 organizations worldwide, with enterprise customers including Qualtrics, General Motors, and Wells Fargo.",
+    "toolComparison": {
+      "title": "Power BI vs Tableau Comparison",
+      "headers": ["Feature", "Power BI", "Tableau"],
+      "rows": [
+        ["Best For", "Microsoft-centric orgs, Excel users, cost-conscious teams", "Data exploration, complex visualizations, diverse data sources"],
+        ["Ease of Use", "Familiar for Excel users, lower learning curve", "Steeper learning curve, more powerful once mastered"],
+        ["Microsoft Integration", "Native integration (Excel, Teams, SharePoint, Azure)", "Requires connectors, less seamless"],
+        ["Visualization", "Good standard charts, improving custom visuals", "Industry-leading, highly customizable"],
+        ["AI Features", "Copilot, Q&A natural language, auto-insights", "Ask Data, Explain Data, Einstein integration"],
+        ["Pricing", "Free desktop, $10-20/user/month Pro/Premium", "$15-75/user/month, higher enterprise cost"],
+        ["Data Handling", "Best with structured data, 1GB limit (Pro)", "Handles large, complex datasets better"],
+        ["Collaboration", "Tight Teams/SharePoint integration", "Tableau Server/Cloud, broader sharing options"]
+      ],
+      "comparisonVideoUrl": "https://youtu.be/C9hO1kbSI98?si=pHwoKGhf6372-80x"
+    },
     "tools": [
       {
         "name": "Power BI",
@@ -249,11 +268,16 @@
             "conclusion": "Best practice: Excel → analyze, Power BI → communicate and decide"
           }
         }
+      },
+      {
+        "name": "Tableau",
+        "description": "More targeted for exploration and discovering insights with advanced visuals",
+        "url": "https://www.tableau.com",
+        "videoId": "hb-qwRAltOw"
       }
     ],
     "otherTools": [
-      {"name": "Lucanet", "url": "https://www.lucanet.com", "note": "Better for what-if analysis and financial forecasting", "videoUrl": "https://youtu.be/764ipVp8L84"},
-      {"name": "Tableau", "url": "https://www.tableau.com", "note": "More targeted for exploration and discovering insights with advanced visuals", "videoUrl": "https://youtu.be/6xv1KvCMF1Q"}
+      {"name": "Lucanet", "url": "https://www.lucanet.com", "note": "Better for what-if analysis and financial forecasting", "videoUrl": "https://youtu.be/764ipVp8L84"}
     ],
     "videoId": ""
   },
@@ -264,6 +288,7 @@
     "description": "Creating marketing or demo videos to communicate product value",
     "why": "Video content increases engagement and helps explain complex features quickly",
     "howAiHelps": "AI generates scripts, creates avatar-based videos, and automates editing for professional results without filming",
+    "recommendation": "HeyGen is excellent for creating polished AI avatar videos without any filming. It's trusted by over 40,000 paying business customers, from SMBs to Fortune 500 companies. The platform makes it easy to create multilingual content and professional spokesperson videos in minutes.\n\nLoom is the go-to tool for quick screen recordings and async video communication. With over 21 million users across 350,000+ companies, Loom is used by teams at Tesla, Apple, Goldman Sachs, Amazon, Lacoste, and HubSpot. Its AI features automatically generate titles, summaries, and chapters, making videos easy to consume and share.",
     "tools": [
       {
         "name": "HeyGen",
@@ -293,6 +318,7 @@
     "description": "Automating repetitive tasks and building AI-powered workflows",
     "why": "Automation frees up time for strategic work and ensures consistency in routine tasks",
     "howAiHelps": "AI can chain multiple tasks together - pull data from Jira, analyze trends, generate reports, create meeting agendas, and send updates automatically",
+    "recommendation": "Zapier is the leader in no-code automation with over 3 million customers and 100,000+ paying businesses. It connects 6,000+ apps and now includes AI-powered features for smarter workflows. Enterprise customers include Okta, Toyota, Grammarly, Calendly, Remote, and Otter.ai. Remote alone saved $500,000 in headcount and 12,000+ workdays using Zapier automation.",
     "tools": [
       {
         "name": "Zapier",
