@@ -31,6 +31,7 @@ interface Tool {
   url: string
   videoId?: string
   embedUrl?: string
+  localVideo?: string
   screenshotUrl?: string
   exampleUrl?: string
   detailedContent?: DetailedContent
@@ -254,12 +255,31 @@ export default function ActivityPage({ params }: PageProps) {
                         <ImageModal src={tool.screenshotUrl} alt={`${tool.name} Screenshot`} />
                       </div>
                     )}
-                    {/* Custom Embed (e.g., HeyGen demo, Loom illustration) */}
-                    {tool.embedUrl && (
+                    {/* Local Video (e.g., HeyGen demo) */}
+                    {tool.localVideo && (
                       <div>
                         {tool.videoId && (
                           <p className="text-sm text-slate-400 mb-2 font-medium">
-                            {tool.name === 'Loom' ? 'Loom illustration by Jin' : tool.name === 'Gamma' ? 'Gamma illustration by Jin' : tool.name === 'Canva Business' ? 'Canva illustration by Jin' : tool.name === 'Zapier' ? 'Zapier Simple Flow Creation by Jin' : 'Video Created with HeyGen by Jin'}
+                            Video Created with HeyGen by Jin
+                          </p>
+                        )}
+                        <div className="aspect-video">
+                          <video
+                            controls
+                            className="w-full h-full rounded-lg"
+                            src={getAssetPath(tool.localVideo)}
+                          >
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+                    )}
+                    {/* Custom Embed (e.g., Loom illustration) */}
+                    {tool.embedUrl && !tool.localVideo && (
+                      <div>
+                        {tool.videoId && (
+                          <p className="text-sm text-slate-400 mb-2 font-medium">
+                            {tool.name === 'Loom' ? 'Loom illustration by Jin' : tool.name === 'Gamma' ? 'Gamma illustration by Jin' : tool.name === 'Canva Business' ? 'Canva illustration by Jin' : tool.name === 'Zapier' ? 'Zapier Simple Flow Creation by Jin' : 'Video Demo'}
                           </p>
                         )}
                         <div className="aspect-video">
